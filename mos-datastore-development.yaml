@@ -1,6 +1,6 @@
 spring:
   application:
-    name: MOS Data Store
+    name: mos-datastore
 
 #
 # logging
