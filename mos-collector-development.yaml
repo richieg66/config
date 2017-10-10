@@ -66,12 +66,12 @@ logging:
   level:
     org:
       springframework:  INFO
-      integration:  INFO
-      oxm:  INFO
-
-    org:
-      xml:
-      sax:  INFO
+      springframework:
+        integration:  DEBUG
+        oxm:
+          INFO
+        xml:
+          sax:  INFO
 
     uk:
       co:
