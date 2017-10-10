@@ -6,7 +6,9 @@
 
 
 server:
-  port: 8090
+  port: 8090  
+  contextPath: /moscollector
+
 
 mosdatastore:
   runningorder:
