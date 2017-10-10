@@ -64,37 +64,37 @@ captionconfig:
 
 logging:
   level:
-      org:
-        springframework:  INFO
-        integration:  INFO
-        oxm:  INFO
+    org:
+      springframework:  INFO
+      integration:  INFO
+      oxm:  INFO
 
-      org:
-        xml:
-          sax:  INFO
+    org:
+      xml:
+      sax:  INFO
 
-      uk:
-        co:
-          bbc:
-            broadcast:
-              bigted:
-                moscollector: 
-                  service:  
-                    MosServiceActivator:  INFO
-                  tcp:
-                    ByteArrayMOSSerializer: INFO
+    uk:
+      co:
+        bbc:
+          broadcast:
+            bigted:
+              moscollector: 
+                service:  
+                  MosServiceActivator:  INFO
+                tcp:
+                  ByteArrayMOSSerializer: INFO
                     
-                  MosProcessor: DEBUG
+                MosProcessor: DEBUG
 
-                  channel:  
-                    logger: INFO
-                  channels:
-                    logging:  
-                      tcpMessageInChannelLogger:  INFO
+                channel:  
+                  logger: INFO
+                channels:
+                  logging:  
+                    tcpMessageInChannelLogger:  INFO
           
-                      unsolicitedMessageChannelLogger:  INFO
-                      mosDataReplyChannelLogger:  INFO
+                    unsolicitedMessageChannelLogger:  INFO
+                    mosDataReplyChannelLogger:  INFO
 
-                  cache:  INFO
+                cache:  INFO
 
                   caption:  DEBUG
