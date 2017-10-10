@@ -70,7 +70,7 @@ logging:
     org:
       springframework:
         ROOT: INFO
-        integration:  DEBUG
+        integration:  INFO
         oxm:
           INFO
         xml:
@@ -88,7 +88,7 @@ logging:
                 tcp:
                   ByteArrayMOSSerializer: INFO
                     
-                MosProcessor: DEBUG
+                MosProcessor: INFO
 
                 channel:  
                   logger: INFO
