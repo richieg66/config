@@ -1,0 +1,100 @@
+##############################################################
+#
+# Configiuration per region e.g. region id is BBCENPS1305
+#
+##############################################################
+
+
+server:
+  port: 8090
+
+mosdatastore:
+  runningorder:
+    store:
+      uri: http://10.161.156.204:8080/mosdatastore/api.runningorderops/save
+
+
+mosunmarshallingtransformer:
+  displayxml: false
+  
+mosserializer: 
+  displayxml: false
+
+#
+# MOS Gateway
+#
+
+mos:
+  host: 10.161.157.53
+  port: 10540
+
+  mos-id: BIGTED.NEWSHUB1.BBC.MOS
+  ncs-id: BIGTED.WCQA1.BBC.MOS
+
+#
+# Caption config for this region 
+#
+
+captionconfig:
+  cg: 
+    123:  
+      regex:  ^.*[\\[](?<cg>CG)(?<timings>.*)[:](?<cgType>123)[\\\\](?<location>[^\\\\]*)[\\\\](?<credit2>[^\\\\]*)[\\\\](?<live>[^\\\\]*)[\\\\]([^\\\\]*)[\\\\]([^\\\\]*)[\\\\](?<name>[^\\\\]*)[\\\\](?<designation>[^\\\\]*)[\\\\].*[\\]]\\s*$
+      name:
+        keys: name,designation
+      locator:
+        keys: live,location
+      creditdate: 
+        keys: credit2
+
+
+    news:
+      regex:  ^.*[\\[](?<cg>CG)(?<timings>.*)[:](?<cgType>NEWS)[\\\\](?<location>[^\\\\]*)[\\\\](?<credit2>[^\\\\]*)[\\\\](?<live>[^\\\\]*)[\\\\]([^\\\\]*)[\\\\]([^\\\\]*)[\\\\](?<name>[^\\\\]*)[\\\\](?<designation>[^\\\\]*)[\\\\].*[\\]]\\s*$
+      name: 
+        keys: name,designation
+      locator:  
+        keys: live,location
+      creditdate:
+        keys: credit2
+
+
+
+#
+# logging
+#
+
+logging:
+  level:
+      org:
+        springframework:  INFO
+        integration:  INFO
+        oxm:  INFO
+
+      org:
+        xml:
+          sax:  INFO
+
+      uk:
+        co:
+          bbc:
+            broadcast:
+              bigted:
+                moscollector: 
+                  service:  
+                    MosServiceActivator:  INFO
+                  tcp:
+                    ByteArrayMOSSerializer: INFO
+                    
+                  MosProcessor: DEBUG
+
+                  channel:  
+                    logger: INFO
+                  channels:
+                    logging:  
+                      tcpMessageInChannelLogger:  INFO
+          
+                      unsolicitedMessageChannelLogger:  INFO
+                      mosDataReplyChannelLogger:  INFO
+
+                  cache:  INFO
+
+                  caption:  DEBUG
