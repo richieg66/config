@@ -37,7 +37,7 @@ mos:
 
 captionconfig:
   cg: 
-    123:  
+    '123':  
       regex:  ^.*[\\[](?<cg>CG)(?<timings>.*)[:](?<cgType>123)[\\\\](?<location>[^\\\\]*)[\\\\](?<credit2>[^\\\\]*)[\\\\](?<live>[^\\\\]*)[\\\\]([^\\\\]*)[\\\\]([^\\\\]*)[\\\\](?<name>[^\\\\]*)[\\\\](?<designation>[^\\\\]*)[\\\\].*[\\]]\\s*$
       name:
         keys: name,designation
