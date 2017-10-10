@@ -29,9 +29,12 @@ mosserializer:
 mos:
   host: 10.161.157.53
   port: 10540
-
+  maxMessageSize: 131072
+  
   mos-id: BIGTED.NEWSHUB1.BBC.MOS
   ncs-id: BIGTED.WCQA1.BBC.MOS
+  
+  
 
 #
 # Caption config for this region 
