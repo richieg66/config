@@ -65,8 +65,8 @@ captionconfig:
 logging:
   level:
     org:
-      springframework:  INFO
       springframework:
+        ROOT: INFO
         integration:  DEBUG
         oxm:
           INFO
@@ -78,7 +78,8 @@ logging:
         bbc:
           broadcast:
             bigted:
-              moscollector: 
+              moscollector:
+                ROOT: INFO 
                 service:  
                   MosServiceActivator:  INFO
                 tcp:
