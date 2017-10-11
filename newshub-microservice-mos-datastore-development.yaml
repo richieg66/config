@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: mos-datastore
+
+#
+# logging
+#
+
+logging:
+  level:
+    org:
+      springframework: INFO
+      
+      data:
+        mongodb:  DEBUG
+
+    uk:
+      co:
+        bbc:
+          broadcast:
+            bigted:
+              mosdatastore: DEBUG
+
+
+
+server:
+  port: 8080 
+  contextPath: /mosdatastore
+
+
+#
+# MongoDB
+#
+
+mongodb:
+  database: mos
+  hostname: 172.17.0.2
+  port: 27017
+  
+  
